@@ -339,7 +339,7 @@ cd $GOPATH/src/github.com/opensec-cn/kunpeng
 go install github.com/mjibson/esc
 
 # 打包JSON插件到项目代码中
-esc -include='\.json$' -o plugin/json/JSONPlugin.go -pkg jsonplugin plugin/json/
+$GOPATH/bin/esc -include='\.json$' -o plugin/json/JSONPlugin.go -pkg jsonplugin plugin/json/
 
 # 编译c版本（所有语言均可使用）
 go build -buildmode=c-shared --ldflags="-w -s -X main.VERSION=20190226" -o kunpeng_c.so
